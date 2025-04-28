@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <meta name="robots" content="noindex">
+    <script>
+      var path = window.location.pathname || '/';
+      var query = window.location.search || '';
+      var hash = window.location.hash || '';
+      var destination = 'https://alvinwan.com' + path + query + hash;
+  
+      document.addEventListener('DOMContentLoaded', function () {
+        var link = document.getElementById('redirect-link');
+        if (link) {
+          link.href = destination;
+        }
+      });
+  
+      window.location.replace(destination);
+    </script>
+  </head>
+  <body>
+    <p>If you are not redirected automatically, <a id="redirect-link" href="https://alvinwan.com">click here</a>.</p>
+  </body>
+</html>
